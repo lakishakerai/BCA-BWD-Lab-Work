@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subjects List</title>
+</head>
+<body>
+
+    <h1>My Semester Subjects</h1>
+
+    <button onclick="showSubjects()">Show Subjects</button>
+
+    <h2>Subject List</h2>
+
+    <ol id="subjectList"></ol>
+
+    <script>
+        function showSubjects() {
+
+            var subjects = [
+                "Entrepreneurship",
+                "Mathematics 1",
+                "AOC",
+                "PP1",
+                "BWD Theory",
+                "ES"
+            ];
+
+            var list = "";
+
+            for (var i = 0; i < subjects.length; i++) {
+                list += "<li>" + subjects[i] + "</li>";
+            }
+
+            document.getElementById("subjectList").innerHTML = list;
+        }
+    </script>
+
+</body>
+</html>

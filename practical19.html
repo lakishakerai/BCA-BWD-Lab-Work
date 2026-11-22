@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+</head>
+<body>
+
+    <h1>Student Registration Form</h1>
+
+    <form onsubmit="return validateForm()">
+
+        <label>Full Name:</label>
+        <input type="text" id="name">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="text" id="email">
+        <br><br>
+
+        <label>Mobile Number:</label>
+        <input type="text" id="mobile">
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" id="password">
+        <br><br>
+
+        <button type="submit">Register</button>
+
+    </form>
+
+    <p id="message"></p>
+
+    <script>
+        function validateForm() {
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var mobile = document.getElementById("mobile").value;
+            var password = document.getElementById("password").value;
+
+            if (name == "" || email == "" ||
+                mobile == "" || password == "") {
+
+                alert("Please fill all fields.");
+                return false;
+            }
+
+            if (!email.includes("@") || !email.includes(".")) {
+                alert("Please enter a valid email.");
+                return false;
+            }
+
+            if (mobile.length != 10 || isNaN(mobile)) {
+                alert("Please enter a valid 10-digit mobile number.");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must contain at least 6 characters.");
+                return false;
+            }
+
+            document.getElementById("message").innerHTML =
+                "Registration Successful!";
+
+            return false;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admission Form</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        .form-box {
+            width: 400px;
+            margin: 30px auto;
+            padding: 25px;
+            border: 3px solid navy;
+            background-color: white;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: darkblue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>College Admission Form</h1>
+
+    <div class="form-box">
+
+        <form>
+            <label>Student Name:</label>
+            <input type="text" required>
+
+            <label>Email:</label>
+            <input type="email" required>
+
+            <label>Mobile Number:</label>
+            <input type="tel" required>
+
+            <label>Date of Birth:</label>
+            <input type="date">
+
+            <label>Gender:</label>
+            <select>
+                <option>Select Gender</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+
+            <label>Course:</label>
+            <select>
+                <option>Select Course</option>
+                <option>BCA</option>
+                <option>BBA</option>
+                <option>B.Com</option>
+            </select>
+
+            <label>Address:</label>
+            <textarea rows="4"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Geolocation and Iframe</title>
+</head>
+<body>
+
+    <h1>HTML5 Geolocation and Iframe</h1>
+
+    <h2>Geolocation Example</h2>
+
+    <button onclick="getLocation()">Get My Location</button>
+
+    <p id="location"></p>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                document.getElementById("location").innerHTML =
+                    "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            document.getElementById("location").innerHTML =
+                "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+
+    <h2>Iframe Example</h2>
+
+    <iframe
+        src="https://www.google.com/maps?q=Marwadi%20University&output=embed"
+        width="600"
+        height="400">
+    </iframe>
+
+</body>
+</html>

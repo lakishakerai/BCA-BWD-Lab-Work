@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Canvas and SVG</title>
+</head>
+<body>
+
+    <h1>HTML5 Canvas and SVG</h1>
+
+    <h2>Canvas Example</h2>
+
+    <canvas id="myCanvas" width="400" height="200"
+        style="border:1px solid black;">
+    </canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx = canvas.getContext("2d");
+
+        ctx.fillStyle = "blue";
+        ctx.fillRect(50, 50, 150, 80);
+
+        ctx.fillStyle = "red";
+        ctx.beginPath();
+        ctx.arc(280, 90, 40, 0, 2 * Math.PI);
+        ctx.fill();
+    </script>
+
+    <h2>SVG Example</h2>
+
+    <svg width="400" height="200"
+        style="border:1px solid black;">
+
+        <rect x="50" y="40" width="150" height="80"
+            fill="green" />
+
+        <circle cx="280" cy="80" r="40"
+            fill="orange" />
+
+        <line x1="50" y1="150" x2="350" y2="150"
+            stroke="blue" stroke-width="4" />
+
+    </svg>
+
+</body>
+</html>
